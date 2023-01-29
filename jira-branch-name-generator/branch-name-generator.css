@@ -1,0 +1,105 @@
+#generator-container {
+    --icon-color:#5f5f5f;
+    --border-color: #DFE1E6;
+    --successLabel: #444444;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+#generator-container *:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#git-branch-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.git-branch-title {
+    color: #172b4d;
+    font-weight: 600;
+}
+
+#copy-to-clipboard-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#copy-to-clipboard-container fieldset {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+#git-branch-icon {
+    color: var(--icon-color);
+}
+
+#branch-name {
+    width: 100%;
+    padding: 9px;
+    border: solid 1px var(--border-color);
+    border-radius: 3px 0 0 3px;
+    color: #b9b9b9;
+}
+
+#copy-to-clipboard {
+    cursor: pointer;
+    height: 100%;
+    background-color: rgba(9, 30, 66, 0.04);
+    border: solid 1px var(--border-color);
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    transition: all 200ms;
+}
+
+#copy-to-clipboard:hover {
+    background-color: #e9e9e9;
+}
+
+#copy-button-container {
+    position: relative;
+}
+
+#copied-label {
+    opacity: 0;
+    transition: all 320ms;
+    position: absolute;
+    top: -33px;
+    width: 60px;
+    left: -50%;
+    right: -50%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#copied-label.active {
+    opacity: 1;
+    background-color: var(--successLabel);
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    padding: 3px;
+}
+
+#copied-label.active:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + -1px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    border-top: 7px solid var(--successLabel);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
