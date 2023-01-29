@@ -19,7 +19,8 @@
       "css": ["branch-name-generator.css"],
       "matches": [
         "https://*.atlassian.net/browse/*",
-        "https://*.atlassian.net/jira/software/projects/*"
+        "https://*.atlassian.net/jira/software/projects/*",
+        "https://e-3d-jira2.capgemini.com/jira2/browse/*"
       ]
     }
   ]
